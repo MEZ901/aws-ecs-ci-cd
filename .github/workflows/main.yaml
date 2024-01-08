@@ -58,7 +58,7 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: js-service
+          service: js-service-two
           cluster: lacasadeljs
           wait-for-service-stability: true
 
