@@ -42,9 +42,9 @@ jobs:
           REPOSITORY: backend
         working-directory: server
         run: |
-          docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV
+          docker build -t $ECR_REGISTRY/$REPOSITORY:latest .
+          docker push $ECR_REGISTRY/$REPOSITORY:latest
+          echo "image=$ECR_REGISTRY/$REPOSITORY:latest" >> $GITHUB_ENV
 
   build-and-push-frontend:
     runs-on: ubuntu-latest
