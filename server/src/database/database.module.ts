@@ -3,12 +3,10 @@ import { ModelDefinition, MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://issammez:issammat03@cluster0.xwqcdxr.mongodb.net/?retryWrites=true&w=majority',
-      {
-        dbName: 'userExplorer',
-      },
-    ),
+    // TODO: Replace with your Atlas connection string
+    MongooseModule.forRoot('mongodb://localhost:27017', {
+      dbName: 'userExplorer',
+    }),
   ],
 })
 export class DatabaseModule {

@@ -10,6 +10,15 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
+  @Get(':id')
+  async findOne() {
+    return {
+      id: 1,
+      username: 'test',
+      email: 'ayoub@gmail.com',
+    };
+  }
+
   @Post()
   async create() {
     return this.usersService.create({
