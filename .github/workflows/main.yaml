@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Adjust the Node.js version as needed
+
+      - name: Install dependencies
+        run: npm install
+
+  build-and-push-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Adjust the Node.js version as needed
+
+      - name: Install dependencies
+        run: npm install
